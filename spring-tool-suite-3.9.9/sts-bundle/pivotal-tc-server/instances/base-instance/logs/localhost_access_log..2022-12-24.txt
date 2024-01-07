@@ -1,0 +1,4 @@
+127.0.0.1 - - [24/Dec/2022:13:02:29 +0530] "GET / HTTP/1.1" 200 2714
+0:0:0:0:0:0:0:1 - - [24/Dec/2022:13:02:37 +0530] "GET /E-Patsanstha/WEB-INF/views/NewFile.jsp HTTP/1.1" 404 1062
+127.0.0.1 - - [24/Dec/2022:13:10:11 +0530] "GET / HTTP/1.1" 200 2714
+0:0:0:0:0:0:0:1 - - [24/Dec/2022:13:10:13 +0530] "GET /E-Patsanstha/WEB-INF/views/NewFile.jsp HTTP/1.1" 404 1062

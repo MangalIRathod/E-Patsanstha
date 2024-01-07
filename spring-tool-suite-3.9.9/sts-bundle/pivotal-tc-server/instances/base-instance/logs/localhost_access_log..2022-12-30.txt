@@ -1,0 +1,2 @@
+127.0.0.1 - - [30/Dec/2022:08:26:21 +0530] "GET / HTTP/1.1" 200 2714
+0:0:0:0:0:0:0:1 - - [30/Dec/2022:08:26:24 +0530] "GET /E-Patsanstha/WEB-INF/classes/com/codeft/controller/AdminController.java HTTP/1.1" 404 1062

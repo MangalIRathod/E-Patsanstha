@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ashram_salary" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     ashramsalary.`id` AS ashramsalary_id,
+     ashramsalary.`monthyear` AS ashramsalary_monthyear,
+     ashramsalary.`srno` AS ashramsalary_srno,
+     ashramsalary.`proname` AS ashramsalary_proname,
+     ashramsalary.`spost` AS ashramsalary_spost,
+     ashramsalary.`totaldays` AS ashramsalary_totaldays,
+     ashramsalary.`present` AS ashramsalary_present,
+     ashramsalary.`bs` AS ashramsalary_bs,
+     ashramsalary.`da` AS ashramsalary_da,
+     ashramsalary.`ta` AS ashramsalary_ta,
+     ashramsalary.`bdta` AS ashramsalary_bdta,
+     ashramsalary.`hra` AS ashramsalary_hra,
+     ashramsalary.`other` AS ashramsalary_other,
+     ashramsalary.`ps` AS ashramsalary_ps,
+     ashramsalary.`fsf` AS ashramsalary_fsf,
+     ashramsalary.`oo` AS ashramsalary_oo,
+     ashramsalary.`ot` AS ashramsalary_ot,
+     ashramsalary.`bt` AS ashramsalary_bt,
+     ashramsalary.`deduction` AS ashramsalary_deduction,
+     ashramsalary.`tdeduction` AS ashramsalary_tdeduction,
+     ashramsalary.`netsal` AS ashramsalary_netsal,
+     ashramsalary.`paidsal` AS ashramsalary_paidsal
+FROM
+     `ashramsalary` ashramsalary]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="monthyear" class="java.lang.String"/>
+	<field name="srno" class="java.lang.String"/>
+	<field name="proname" class="java.lang.String"/>
+	<field name="spost" class="java.lang.String"/>
+	<field name="totaldays" class="java.lang.String"/>
+	<field name="present" class="java.lang.String"/>
+	<field name="bs" class="java.lang.Double"/>
+	<field name="da" class="java.lang.Double"/>
+	<field name="ta" class="java.lang.Double"/>
+	<field name="bdta" class="java.lang.Double"/>
+	<field name="hra" class="java.lang.Double"/>
+	<field name="other" class="java.lang.Double"/>
+	<field name="ps" class="java.lang.Double"/>
+	<field name="fsf" class="java.lang.Double"/>
+	<field name="oo" class="java.lang.Double"/>
+	<field name="ot" class="java.lang.Double"/>
+	<field name="bt" class="java.lang.Double"/>
+	<field name="deduction" class="java.lang.Double"/>
+	<field name="tdeduction" class="java.lang.Double"/>
+	<field name="netsal" class="java.lang.Double"/>
+	<field name="paidsal" class="java.lang.Double"/>
+	<variable name="bs" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{bs}]]></variableExpression>
+	</variable>
+	<variable name="da" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{da}]]></variableExpression>
+	</variable>
+	<variable name="ta" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{ta}]]></variableExpression>
+	</variable>
+	<variable name="bdta" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{bdta}]]></variableExpression>
+	</variable>
+	<variable name="hra" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{hra}]]></variableExpression>
+	</variable>
+	<variable name="other" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{other}]]></variableExpression>
+	</variable>
+	<variable name="ps" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{ps}]]></variableExpression>
+	</variable>
+	<variable name="fsf" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{fsf}]]></variableExpression>
+	</variable>
+	<variable name="oo" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{oo}]]></variableExpression>
+	</variable>
+	<variable name="ot" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{ot}]]></variableExpression>
+	</variable>
+	<variable name="bt" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{bt}]]></variableExpression>
+	</variable>
+	<variable name="deduction" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{deduction}]]></variableExpression>
+	</variable>
+	<variable name="tdeduction" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{tdeduction}]]></variableExpression>
+	</variable>
+	<variable name="netsal" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{netsal}]]></variableExpression>
+	</variable>
+	<variable name="paidsal" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{paidsal}]]></variableExpression>
+	</variable>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="120">
+			<rectangle>
+				<reportElement x="661" y="55" width="100" height="28"/>
+			</rectangle>
+			<textField>
+				<reportElement x="661" y="55" width="100" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{monthyear}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="98" y="60" width="546" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tal - Haveli, Dist - Pune 411062- Tel - 8380015576]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="33" width="546" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Shri. Dada Maharaj Natekar Panchkoshadharit Vidyalay, Chikhali]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="9" width="546" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Matrumandir Vishvast Sanstha Nigdi Pune, 44 Sanchalit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="85" width="546" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ashram]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="15"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31">
+			<rectangle>
+				<reportElement x="0" y="0" width="26" height="31"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="26" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr. No.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="26" y="0" width="116" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="142" y="0" width="40" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="182" y="0" width="29" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="211" y="0" width="29" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="240" y="0" width="40" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="280" y="0" width="40" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="320" y="0" width="40" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="360" y="0" width="40" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="400" y="0" width="40" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="440" y="0" width="27" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="467" y="0" width="40" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="507" y="0" width="40" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="547" y="0" width="33" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="580" y="0" width="32" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="612" y="0" width="32" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="644" y="0" width="40" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="761" y="0" width="41" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="724" y="0" width="37" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="684" y="0" width="40" height="31"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="31" y="0" width="111" height="31"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Professor Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="0" width="40" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Post]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="0" width="29" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="0" width="29" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Present Days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="40" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Basic Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="40" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dearness Allowance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="40" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Travelling Allowance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="40" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[B+D+T Allowance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="40" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[House Rent Allowance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="0" width="27" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Other]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="0" width="40" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payable Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="507" y="0" width="40" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Future Subsistance Fund]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="547" y="0" width="33" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Other 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="580" y="0" width="32" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Other 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="612" y="0" width="32" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Business Tax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="644" y="0" width="40" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deduction (Advance)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="684" y="0" width="40" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Deduction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="724" y="0" width="37" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Net Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="761" y="0" width="41" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paid Salary]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<rectangle>
+				<reportElement x="0" y="0" width="26" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="26" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{srno}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="26" y="0" width="116" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="31" y="0" width="111" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{proname}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="142" y="0" width="40" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="142" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{spost}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="182" y="0" width="29" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="182" y="0" width="29" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{totaldays}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="211" y="0" width="29" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="240" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="280" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="320" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="360" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="400" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="440" y="0" width="27" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="467" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="507" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="547" y="0" width="33" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="580" y="0" width="32" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="612" y="0" width="32" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="644" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="684" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="724" y="0" width="37" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="761" y="0" width="41" height="20"/>
+			</rectangle>
+			<textField pattern="###0.00">
+				<reportElement x="761" y="0" width="41" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{paidsal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="724" y="0" width="37" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{netsal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="684" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tdeduction}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="644" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{deduction}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="612" y="0" width="32" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="580" y="0" width="32" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ot}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="547" y="0" width="33" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{oo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="507" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fsf}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="467" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ps}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="440" y="0" width="27" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{other}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="400" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hra}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="360" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bdta}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="320" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ta}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="280" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{da}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="240" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{bs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="211" y="0" width="29" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{present}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54"/>
+	</pageFooter>
+	<summary>
+		<band height="42">
+			<rectangle>
+				<reportElement x="0" y="0" width="26" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="26" y="0" width="116" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="31" y="0" width="111" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="142" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="182" y="0" width="29" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="211" y="0" width="29" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="240" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="280" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="320" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="360" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="400" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="440" y="0" width="27" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="467" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="507" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="547" y="0" width="33" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="580" y="0" width="32" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="612" y="0" width="32" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="761" y="0" width="41" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="724" y="0" width="37" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="684" y="0" width="40" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="644" y="0" width="40" height="20"/>
+			</rectangle>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="240" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{bs}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="280" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{da}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="320" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{ta}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="360" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{bdta}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="400" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{hra}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="440" y="0" width="27" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{other}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="467" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{ps}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="507" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{fsf}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="547" y="0" width="33" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{oo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="580" y="0" width="32" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{ot}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="612" y="0" width="32" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{bt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="644" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{deduction}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="684" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{tdeduction}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="724" y="0" width="37" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{netsal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="761" y="0" width="41" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{paidsal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

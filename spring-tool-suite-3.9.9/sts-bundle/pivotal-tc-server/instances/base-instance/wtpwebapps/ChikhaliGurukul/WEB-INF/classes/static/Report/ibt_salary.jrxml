@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ibt_salary" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     ibtsalary.`id` AS ibtsalary_id,
+     ibtsalary.`monthyear` AS ibtsalary_monthyear,
+     ibtsalary.`srno` AS ibtsalary_srno,
+     ibtsalary.`proname` AS ibtsalary_proname,
+     ibtsalary.`dept` AS ibtsalary_dept,
+     ibtsalary.`salary` AS ibtsalary_salary,
+     ibtsalary.`netsal` AS ibtsalary_netsal
+FROM
+     `ibtsalary` ibtsalary]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="monthyear" class="java.lang.String"/>
+	<field name="srno" class="java.lang.String"/>
+	<field name="proname" class="java.lang.String"/>
+	<field name="dept" class="java.lang.String"/>
+	<field name="salary" class="java.lang.Double"/>
+	<field name="netsal" class="java.lang.Double"/>
+	<variable name="salary" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{salary}]]></variableExpression>
+	</variable>
+	<variable name="netsal" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{netsal}]]></variableExpression>
+	</variable>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="121">
+			<rectangle>
+				<reportElement x="692" y="57" width="110" height="32"/>
+			</rectangle>
+			<textField>
+				<reportElement x="692" y="57" width="110" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{monthyear}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="106" y="11" width="546" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Matrumandir Vishvast Sanstha Nigdi Pune, 44 Sanchalit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="35" width="546" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Shri. Dada Maharaj Natekar Panchkoshadharit Vidyalay, IBT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="62" width="546" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chikhali Tal - Haveli, Dist - Pune 411062- Tel - 8380015576]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="87" width="546" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mandhanpatrak]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="14"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29">
+			<rectangle>
+				<reportElement x="0" y="0" width="55" height="29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="55" y="0" width="182" height="29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="237" y="0" width="118" height="29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="355" y="0" width="113" height="29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="468" y="0" width="115" height="29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="583" y="0" width="112" height="29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="695" y="0" width="107" height="29"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="55" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sr. No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="0" width="178" height="29"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="0" width="118" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="0" width="113" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="468" y="0" width="116" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Net]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="695" y="0" width="107" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="584" y="0" width="111" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cheque No.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31">
+			<rectangle>
+				<reportElement x="0" y="0" width="55" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="55" y="0" width="182" height="31"/>
+			</rectangle>
+			<textField>
+				<reportElement x="59" y="0" width="178" height="31"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{proname}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="237" y="0" width="118" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="355" y="0" width="113" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="468" y="0" width="115" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="583" y="0" width="112" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="695" y="0" width="107" height="31"/>
+			</rectangle>
+			<textField>
+				<reportElement x="237" y="0" width="118" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dept}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="55" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{srno}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="467" y="0" width="116" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{netsal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="354" y="0" width="114" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{salary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54"/>
+	</pageFooter>
+	<summary>
+		<band height="127">
+			<rectangle>
+				<reportElement x="55" y="0" width="182" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="59" y="0" width="178" height="30"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="0" width="55" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="237" y="0" width="118" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="355" y="0" width="113" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="468" y="0" width="115" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="695" y="0" width="107" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="583" y="0" width="112" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="55" y="49" width="182" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Shri. Gautam M. Ingale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="104" width="182" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Principal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="567" y="104" width="170" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Principal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="567" y="47" width="170" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mrs. Vaishali V. Narwade]]></text>
+			</staticText>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="356" y="0" width="112" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{salary}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00" isBlankWhenNull="true">
+				<reportElement x="468" y="0" width="116" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$V{netsal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

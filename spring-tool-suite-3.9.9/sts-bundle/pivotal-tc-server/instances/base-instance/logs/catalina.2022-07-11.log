@@ -1,0 +1,10 @@
+11-Jul-2022 13:00:17.535 INFO [main] com.springsource.tcserver.security.PropertyDecoder.<init> tc Runtime property decoder using memory-based key
+11-Jul-2022 13:00:17.535 INFO [main] com.springsource.tcserver.security.TcDecoder.initCiphers Initializing ciphers
+11-Jul-2022 13:00:18.393 INFO [main] com.springsource.tcserver.security.PropertyDecoder.<init> tcServer Runtime property decoder has been initialized in 877 ms
+11-Jul-2022 13:00:19.314 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-Jul-2022 13:00:19.423 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+11-Jul-2022 13:00:19.626 INFO [main] com.springsource.tcserver.serviceability.rmi.JmxSocketListener.init Started up JMX registry on 127.0.0.1:6969 in 122 ms
+11-Jul-2022 13:00:19.658 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-Jul-2022 13:00:19.658 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Pivotal tc Runtime 9.0.13.B.RELEASE
+11-Jul-2022 13:00:19.674 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\Setup\spring-tool-suite-3.9.9\sts-bundle\pivotal-tc-server\instances\base-instance\conf\Catalina\localhost\DataSecurity.xml]
+11-Jul-2022 13:00:19.736 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/DataSecurity] in deployment descriptor [D:\Setup\spring-tool-suite-3.9.9\sts-bundle\pivotal-tc-server\instances\base-instance\conf\Catalina\localhost\DataSecurity.xml] has been ignored
